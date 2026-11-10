@@ -13,7 +13,7 @@ int main(void)
 
     const int screenWidth = 1500;
     const int screenHeight = 900;
-
+//dd
     InitWindow(screenWidth, screenHeight, "Root Helper");
 
     SetTargetFPS(240);
