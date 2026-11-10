@@ -1,11 +1,11 @@
 #include <raylib.h>
 
 #define RAYGUI_IMPLEMENTATION
-#include "raygui.h"
+#include "../include/raygui.h"
 
-#include "ru_font_helper.h"
+#include "../include/ru_font_helper.h"
 
-//Определяем короткий макрос, чтобы не писать каждый раз Vector2 и spacing
+// macross for ru language
 #define DrawMyText(text, x, y, size, color) DrawTextEx(font, text, (Vector2){x, y}, size, 1, color)
 
 int main(void)
