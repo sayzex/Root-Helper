@@ -1,7 +1,7 @@
 #ifndef FONT_HELPER_H
 #define FONT_HELPER_H
 
-#include "raylib.h"
+#include "../include/raylib/raylib.h"
 
 static inline Font LoadCyrillicFont(const char *path, int fontSize) {
     int codepoints[512] = {0};
