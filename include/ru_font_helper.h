@@ -7,9 +7,12 @@ static inline Font LoadCyrillicFont(const char *path, int fontSize) {
     int codepoints[512] = {0};
     int count = 0;
     for (int i = 0; i < 95; i++) codepoints[count++] = 32 + i;
-    for (int i = 1040; i < 1103; i++) codepoints[count++] = i; // Russian Alphabet
-    codepoints[count++] = 1025; codepoints[count++] = 1105; // Ё, ё
+    for (int i = 1040; i < 1104; i++) codepoints[count++] = i; // Russian Alphabet
+    codepoints[count++] = 1025;
+    codepoints[count++] = 1105; // Ё, ё
 
+    codepoints[count++] = 8211; // - — 
+    codepoints[count++] = 8212;
     return LoadFontEx(path, fontSize, codepoints, count);
 }
 

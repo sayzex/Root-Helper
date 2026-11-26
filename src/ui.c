@@ -12,17 +12,21 @@ void DrawMainUI(Font font, bool *isRussian) {
     static bool fastbootFlash = false;
     static bool fastbootReboot = false;
 
-    DrawMyText(font, "Root Helper built for you!", 510, 20, 30, WHITE);
+    if (*isRussian) {
+        DrawMyText(font, "Root Helper — создано для вас!", 550, 20, 30, WHITE);
+    } else {
+        DrawMyText(font, "Root Helper — built for you!", 550, 20, 30, WHITE);
+    }
     DrawLine(10, 55, 1490, 55, GRAY);
     DrawMyText(font, "TG: @wipestonehere", 10, 35, 20, RED);
 
     // Переключение языка (с разыменованием указателя через *)
-    const char *langButtonText = (*isRussian) ? "Language: RU" : "Language: EN";
+    const char *langButtonText = (*isRussian) ? "Язык: RU" : "Language: EN";
     if (GuiButton((Rectangle){1290, 15, 200, 35}, langButtonText)) {
         *isRussian = !(*isRussian);
     }
 
-    // Кнопки интерфейса с переключением их логических состояний
+   
     if (GuiButton((Rectangle){10, 70, 250, 60}, "adb devices")) {
         adbButton = !adbButton;
     }

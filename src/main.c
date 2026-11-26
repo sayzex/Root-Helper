@@ -1,4 +1,5 @@
 #include "../include/raylib/raylib.h"
+#include <sys/types.h>
 
 #define RAYGUI_IMPLEMENTATION
 #include "../include/raylib/raygui.h"
@@ -15,7 +16,7 @@ int main(void)
 
     const int screenWidth = 1500;
     const int screenHeight = 900;
-//dd
+
     InitWindow(screenWidth, screenHeight, "Root Helper");
 
     SetTargetFPS(240);
@@ -53,7 +54,6 @@ int main(void)
         
         EndDrawing();
     }
-
 
 
 
